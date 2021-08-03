@@ -1,49 +1,38 @@
-var names_of_people = [];
-    
-function submit()
-{
-    var GuestName = document.getElementById("name1").value;
-	names_of_people.push(GuestName);
-	console.log(GuestName);    
-    console.log(names_of_people);
-    var lenght_of_name = names_of_people.length;
-    console.log(lenght_of_name);
-	document.getElementById("display_name").innerHTML=names_of_people.toString();
-   }
+canvas = document.getElementById("myCanvas")
+ctx= canvas.getContext("2d");
 
+ctx.beginPath();
+ctx.stokeStyle = "red";
+ctx.lineWidth = 1;
+ctx.rect(150, 143, 430, 200);
+ctx.stroke();
 
+ctx.beginPath();
+ctx.stokeStyle = "blue";
+ctx.lineWidth = 5;
+ctx.arc(250, 210, 40, 0, 2* Math.PI);
+ctx.stroke();
 
-function show()
-{
-	var i= names_of_people.join("<br>");
-	console.log(names_of_people);
-	document.getElementById("p1").innerHTML=i.toString();
-	document.getElementById("     ").style.display="block";
-	names_of_people= sort_button;
-	}
+ctx.beginPath();
+ctx.stokeStyle = "black";
+ctx.lineWidth = 5;
+ctx.arc(350, 210, 40, 0, 2* Math.PI);
+ctx.stroke();
 
+ctx.beginPath();
+ctx.stokeStyle = "red";
+ctx.lineWidth = 5;
+ctx.arc(450, 210, 40, 0, 2* Math.PI);
+ctx.stroke();
 
-function sorting()
-	{
-		names_of_people.sort();
-     console.log(names_of_people);
-		var i= names_of_people.join("<br>");
-		console.log(names_of_people);		
-		document.getElementById("sorted").innerHTML=i.toString();
-		}
+ctx.beginPath();
+ctx.stokeStyle = "yellow";
+ctx.lineWidth = 5;
+ctx.arc(300, 250, 40, 0, 2* Math.PI);
+ctx.stroke();
 
-
-function searching()
-{
-	var s= document.getElementById("s1").value;
-	var found=0;
-	var j;
-	for(j=0; j<names_of_people.length; j++)
-		{
-			if(s==names_of_people[j]){
-				found=found+1;
-			}	
-		}
-	document.getElementById("p2").innerHTML="name found "+found+" time/s";
-	console.log("found name "+found+" time/s");
-}
+ctx.beginPath();
+ctx.stokeStyle = "green";
+ctx.lineWidth = 5;
+ctx.arc(400, 250, 40, 0, 2* Math.PI);
+ctx.stroke();
