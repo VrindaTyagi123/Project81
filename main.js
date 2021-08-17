@@ -1,5 +1,11 @@
-canvas = document.getElementById("myCanvas")
+canvas = document.getElementById("myCanvas");
 ctx= canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.stokeStyle = "grey";
+ctx.lineWidth = 1;
+ctx.rect(150, 143, 430, 200);
+ctx.stroke();
 
 ctx.beginPath();
 ctx.stokeStyle = "red";
